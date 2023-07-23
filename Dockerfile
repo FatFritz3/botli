@@ -24,11 +24,3 @@ RUN mv stockfish_* engines/stockfish && chmod +x engines/stockfish
 
 # Add the "--matchmaking" flag to start the matchmaking mode.
 CMD python3 user_interface.py --matchmaking
-RUN apt-get update
-RUN apt-get -y install nginx
-
-COPY index.html /var/www/html/index.html
-
-EXPOSE 80
-
-CMD ["nginx",  "-g", "daemon off;"]
