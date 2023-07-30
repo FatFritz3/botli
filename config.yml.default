@@ -60,8 +60,8 @@ engine:                                   # Engine settings.
       only_with_wins: false               # Whether to play only moves that have won before.
       selection: "performance"            # Move selection is "performance" or "win_rate".
       anti: false                         # Whether to play the moves in which the opponent performs the worst.
-#     max_depth: 16                       # Half move max depth. (Comment this line for max depth)
-#     max_moves: 1                        # Max number of moves played from Lichess opening explorer. (Comment this line for max moves)
+      max_depth: 30                       # Half move max depth. (Comment this line for max depth)
+      max_moves: 100                      # Max number of moves played from Lichess opening explorer. (Comment this line for max moves)
     lichess_cloud:
       enabled: true                       # Activate online moves from Lichess cloud eval.
       priority: 100                       # Priority with which this move source is used. Higher priority is used first.
