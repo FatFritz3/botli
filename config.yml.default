@@ -1,4 +1,4 @@
-token: "lip_AI9aW9vVqZcSQBeOksuj"         # Lichess OAuth2 Token.
+token: "lip_kL2Cj98wpnfyJGrxKFGC"         # Lichess OAuth2 Token.
 
 engine:                                   # Engine settings.
   dir: "./engines"                        # Directory containing the engine.
@@ -18,12 +18,11 @@ engine:                                   # Engine settings.
     max_pieces: 5                         # Count of max pieces in the local gaviota endgame tablebases.
   uci_options:                            # Arbitrary UCI options passed to the engine. (Commenting allowed)
     Move Overhead: 100                    # Increase if your bot flags games too often.
-    Threads: 2                            # Max CPU threads the engine can use.
-    Hash: 64                              # Max memory (in megabytes) the engine can allocate.
+    Threads: 1                            # Max CPU threads the engine can use.
+    Hash: 16                              # Max memory (in megabytes) the engine can allocate.
     MultiPV: 1
     Ponder: true
-    Slow mover: 47
-    Use NNUE: true
+    Slow mover: 55
   variants:
     enabled: false                        # Activate seperate engine for other chess variants than standard and chess960.
     dir: "./engines"                      # Directory containing the engine.
@@ -100,7 +99,7 @@ challenge:                                # Incoming challenges. (Commenting all
   bullet_with_increment_only: true        # Whether bullet games against BOTs should only be accepted with increment.
 # min_increment: 0                        # Minimum amount of increment to accept a challenge.
 # max_increment: 180                      # Maximum amount of increment to accept a challenge.
-# min_initial: 0                          # Minimum amount of initial time to accept a challenge.
+#  min_initial:                           # Minimum amount of initial time to accept a challenge.
 # max_initial: 315360000                  # Maximum amount of initial time to accept a challenge.
   variants:                               # Chess variants to accept (https://lichess.org/variant).
     - standard
@@ -114,7 +113,7 @@ challenge:                                # Incoming challenges. (Commenting all
 #   - racingKings
 #   - threeCheck
   time_controls:                          # Time controls to accept.
-    - bullet
+#   - bullet
     - blitz
     - rapid
     - classical
@@ -126,8 +125,8 @@ challenge:                                # Incoming challenges. (Commenting all
     - rated                               # Rated games
 
 matchmaking:
-  initial_time: 180                       # Initial time for matchmaking mode.
-  increment: 1                            # Increment time for matchmaking mode.
+  initial_time: 300                       # Initial time for matchmaking mode.
+  increment: 3                            # Increment time for matchmaking mode.
   rated: true                             # Activate rated games in matchmaking mode.
   timeout: 30                             # Time until a challenge is canceled.
   variants:                               # Chess variants (https://lichess.org/variant) to challenge.
@@ -169,6 +168,8 @@ messages:
     - NikitosikBot
     - EmptikBot
     - EmptikVariantsBot
+    - M-Z_Bot
+    - Africaata
 
 books:                                    # Names of the opening books (to be used above in the opening_books section) and paths to the opening books.
   DefaultBook: "/path/to/DefaultBook.bin"
