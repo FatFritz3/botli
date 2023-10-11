@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM debian:stable-slim
 COPY . .
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y wget unzip python3 python3-pip git
