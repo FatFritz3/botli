@@ -18,8 +18,8 @@ engine:                                   # Engine settings.
     max_pieces: 5                         # Count of max pieces in the local gaviota endgame tablebases.
   uci_options:                            # Arbitrary UCI options passed to the engine. (Commenting allowed)
     Move Overhead: 100                    # Increase if your bot flags games too often.
-    Threads: 1                            # Max CPU threads the engine can use.
-    Hash: 16                              # Max memory (in megabytes) the engine can allocate.
+    Threads: 2                            # Max CPU threads the engine can use.
+    Hash: 64                              # Max memory (in megabytes) the engine can allocate.
     MultiPV: 1
     Ponder: true
     Slow mover: 55
@@ -125,8 +125,8 @@ challenge:                                # Incoming challenges. (Commenting all
     - rated                               # Rated games
 
 matchmaking:
-  initial_time: 300                       # Initial time for matchmaking mode.
-  increment: 3                            # Increment time for matchmaking mode.
+  initial_time: 180                       # Initial time for matchmaking mode.
+  increment: 1                            # Increment time for matchmaking mode.
   rated: true                             # Activate rated games in matchmaking mode.
   timeout: 30                             # Time until a challenge is canceled.
   variants:                               # Chess variants (https://lichess.org/variant) to challenge.
